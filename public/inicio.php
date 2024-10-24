@@ -49,8 +49,7 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
+            <a href="../prestamos/prestamo.php" class="text-sm font-semibold leading-6 text-gray-900">Prestamos</a>
             <a href="../contacto.html" class="text-sm font-semibold leading-6 text-gray-900">Contactar</a>
             <a href="../libros/Libros.php" class="text-sm font-semibold leading-6 text-gray-900">Libros</a>
         </div>
