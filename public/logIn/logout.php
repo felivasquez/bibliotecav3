@@ -33,44 +33,10 @@
             </div>
       
             <div>
-              <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Ingresar</button>
+              <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
             </div>
           </form>   
         </div>
     </div>
 </body>
 </html>     
-
-
-<?php
-session_start();
-include('../../app/config/conex.php');
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $correo = $_POST["correo"];
-    $contrasena = $_POST["pass"];
-
-    if (!$conexion) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    $sql = "SELECT nombre, correo, contraseña FROM usuarios WHERE correo = ? AND contraseña = ?";
-    $stmt = $conexion->prepare($sql);
-    $stmt->bind_param("ss", $correo, $contrasena);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-
-    if ($result && $result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $_SESSION['user_name'] = $row['nombre'];        
-        header("Location: ../inicio.php");
-        exit();
-    } else {
-        echo "Error: Usuario o contraseña incorrectos";
-    }
-
-    $stmt->close();
-    $conexion->close();
-}
-?>

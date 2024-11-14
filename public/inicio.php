@@ -12,26 +12,6 @@
 </head>
 <header class="header">
 </header>
-    <!-- <section class="seccion1">
-            <nav>
-                <ul>
-                <li id="botonOpc"><a href="opcion.html">Inicio</a></li>
-                <li id="botonAce"><a href="acerca.html">Acerca</a></li>
-                <li id="botonSer"><a href="Servicios.html">Servicios</a></li>
-                <li id="botonCon"><a href="contactos.html">Contacto</a></li>
-                <li id="botoni2"><a href="libros.php  ">Libros</a></li>
-                </ul>
-            </nav>
-    </section> -->
-    <?php  
-        if (!isset($_SESSION['user_name'])) { 
-            echo "";
-        } else {?>
-            
-            <h1>Bienvenido/a <?php echo $_SESSION['user_name']; ?> </h1> <?php
-
-        }
-    ?> 
 <body class="body">
 <div class="bg-white">
     <header class="absolute inset-x-0 top-0 z-50">
@@ -49,13 +29,14 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="../prestamos/prestamo.php" class="text-sm font-semibold leading-6 text-gray-900">Prestamos</a>
-            <a href="../contacto.html" class="text-sm font-semibold leading-6 text-gray-900">Contactar</a>
             <a href="../libros/Libros.php" class="text-sm font-semibold leading-6 text-gray-900">Libros</a>
+            <a href="../prestamos/prestamo.php" class="text-sm font-semibold leading-6 text-gray-900">Prestamos</a>
+            <a href="../users/listUser.php" class="text-sm font-semibold leading-6 text-gray-900">Usuarios</a>
+            <a href="../contacto.html" class="text-sm font-semibold leading-6 text-gray-900">Contactar</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="login/login.php" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Log in <span aria-hidden="true">&rarr;</span></a>
-            <a href="signIn/sign.php" class="text-sm font-semibold leading-6 text-gray-900">Sign in <span aria-hidden="true">&rarr;</span></a>
+            <a href="login/login.php" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Iniciar Sesion <span aria-hidden="true">&rarr;</span></a>
+            <a href="signIn/sign.php" class="text-sm font-semibold  px-3.5 py-2.5 leading-6 text-gray-900">Registrarse <span aria-hidden="true">&rarr;</span></a>
         </div>
         </nav>
     </header>
